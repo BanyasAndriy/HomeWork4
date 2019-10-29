@@ -16,6 +16,9 @@ public class People {
 		this.age = age;
 	}
 	
+	public People() {
+		
+	}
 	
 	public String getName() {
 		return name;
