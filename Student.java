@@ -17,16 +17,10 @@ public class Student extends  People implements Comparable<Student> {
 		this.course=course;
 		this.group=group;
 	}
-	/*
-	public Student() {
-		super("anonim", "anonim", "anonim", 0);
 	
-	this.nameOfUniversity = "university";
-	this.faculty="faculty";
-	this.course=0;
-	this.group="";
+	public Student() {
 		
-	}*/
+	}
 	
 	public void setNameOfUniversity(String nameOfUniversity) {
 		this.nameOfUniversity = nameOfUniversity;
