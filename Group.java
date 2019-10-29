@@ -6,30 +6,23 @@ import java.util.Scanner;
 public class Group implements Voenkom {
 
 	private Student[] studs ;
-	private int sizeOfGroup;
+	
 	private String name;
 	
-	public Group(String name , int sizeOfGroup) {
+	public Group(String name ) {
 		this.name = name;
-		this.sizeOfGroup = sizeOfGroup;
-	   studs = new Student[sizeOfGroup];
+		
+	   studs = new Student[10];
 	}
 	
 	public Group() {
 		this.name = "group";
-		this.sizeOfGroup = 10;
-		studs=new Student[sizeOfGroup];
+		
+		studs=new Student[10];
 	}
 	
 	
-	public int getSizeOfGroup() {
-		return sizeOfGroup;
-	}
-
-	public void setSizeOfGroup(int sizeOfGroup) {
-		this.sizeOfGroup = sizeOfGroup;
-	}
-
+	
 	public String getName() {
 		return name;
 	}
@@ -45,14 +38,14 @@ public class Group implements Voenkom {
 		for (int i = 0; i < this.studs.length; i++) {
 			if(studs[i]==null) {
 				studs[i]=stud;
-				System.out.println("Студент " + stud.getLastName() + " " + stud.getName() + " доданий в групу " + this.getName() + "!");
+				System.out.println("Cтудент " + stud.getLastName() + " " + stud.getName() + " доданий у групу " + this.getName() + "!");
 				break;
 			}else {
 				counter++;
 			}
 			
 		}
-		if(counter==this.sizeOfGroup) {
+		if(counter==10) {
 			throw new ExceptionOfGroup();
 		}
 	
@@ -79,7 +72,7 @@ public class Group implements Voenkom {
 		 System.out.println("Введіть назву університета : ");
 		    nameOfUniversity=scan.nextLine();
 		    
-		System.out.println("Введіть ім*я студента: ");
+		System.out.println("Введіть імя студента: ");
 		name= scan.nextLine();
 		
 		System.out.println("Введіть прізвище студента: ");
@@ -95,7 +88,7 @@ public class Group implements Voenkom {
 	    System.out.println("Введіть факультет : ");
 	    faculty=sc.nextLine();
 	    
-	    System.out.println("Введіть курси :");
+	    System.out.println("Введіть курс :");
 	    course=scan.nextInt();
 	    
 	    System.out.println("Введіть групу :");
@@ -121,7 +114,7 @@ public class Group implements Voenkom {
 		if(studs[i]!=null) {
 			if(studs[i].equals(stud)) {
 				studs[i]=null;
-				System.out.println("Студент " + stud.getLastName() + " " + stud.getName() + " видалений з групи!");
+				System.out.println("Студент " + stud.getLastName() + " " + stud.getName() + " вилучений з групи!");
 				break;
 			}
 		}
@@ -187,7 +180,7 @@ public void sortByParametr() {
 	
 	int parametr;
 	Scanner scan = new Scanner(System.in);
-	System.out.println("Введіть  1 - для сортування за іменем \n 2 - для сортування за прізвищем \n 3 - для сортування за віком ");
+	System.out.println("Введіть 1 - для сортування за іменем \n 2 - для сортування за прізвищем \n 3 - для сортування за віком ");
 	parametr=scan.nextInt();
 	
 	
@@ -213,7 +206,7 @@ public void sortByParametr() {
 
 	
 	public void sortStudentsByLastName() {
-	System.out.println("Сортування за прізвищем: ");
+	System.out.println("Сортування по прізвищу: ");
 	toString();	
 		
 	}
@@ -224,7 +217,7 @@ public void sortByParametr() {
 		
 	
     public void sortByName() {
-    	System.out.println("Сортування за іменем ");
+    	System.out.println("Cортировка по імені ");
     	 for(int i = 0; i<studs.length; i++) {
 	         for (int j = i+1; j<studs.length; j++) {
 	          
@@ -243,9 +236,8 @@ public void sortByParametr() {
 	int count=1;
 		 for (int i = 0; i < studs.length; i++) {
 			 if(studs[i]!=null) {
-		 System.out.println( count + ")" + "ПІБ: " + studs[i].getLastName()+" " + studs[i].getName() + " " +studs[i].getSurName()  +  "\n Вік:" + studs[i].getAge() + " \n Факультет: " + studs[i].getFaculty() + "\nУніверситет: " + studs[i].getNameOfUniversity()+ " \n Група: " + studs[i].getGroup());
-		
-				 count++;
+			 System.out.println( count + ")" + "ПІБ: " + studs[i].getName()+" " + studs[i].getLastName() + " " +studs[i].getSurName()  +  "\n Вік:" + studs[i].getAge() + " \n Факультет: " + studs[i].getFaculty() + "\nУніверситет: " + studs[i].getNameOfUniversity()+ " \n Група: " + studs[i].getGroup());
+		count++;
 			 }}
 		 	
     	
@@ -254,7 +246,7 @@ public void sortByParametr() {
 
     public void sortByAge() {
     	
-    	System.out.println("Сортування за віком ");
+    	System.out.println("Cортировка по віку ");
       	 
     	
     	
@@ -277,7 +269,7 @@ public void sortByParametr() {
 	int count=1;
 		 for (int i = 0; i < studs.length; i++) {
 			 if(studs[i]!=null) {
-			 System.out.println( count + ")" + "ПІБ: " + studs[i].getLastName()+" " + studs[i].getName() + " " +studs[i].getSurName()  +  "\n Вік:" + studs[i].getAge() + " \n Факультет: " + studs[i].getFaculty() + "\nУніверситет: " + studs[i].getNameOfUniversity()+ " \n Група: " + studs[i].getGroup());
+			 System.out.println( count + ")" + "ПІБ: " + studs[i].getName()+" " + studs[i].getLastName() + " " +studs[i].getSurName()  +  "\n Вік:" + studs[i].getAge() + " \n Факультет: " + studs[i].getFaculty() + "\nУніверситет: " + studs[i].getNameOfUniversity()+ " \n Група: " + studs[i].getGroup());
 		count++;
 			 }}
 		 	
@@ -290,8 +282,9 @@ public void sortByParametr() {
 		
 		System.out.println("Студенти ,яким потрібно відвідати військомат!");
 		int count=0;
-	
-		Student[] studToVoenkom = new Student[this.sizeOfGroup];
+
+
+		Student[] studToVoenkom = new Student[10];
 		int pos=0;
 		for (int i = 0; i < studToVoenkom.length; i++) {
 			if(studs[i]!=null) {
