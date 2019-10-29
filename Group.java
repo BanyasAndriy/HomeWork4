@@ -45,7 +45,7 @@ public class Group implements Voenkom {
 		for (int i = 0; i < this.studs.length; i++) {
 			if(studs[i]==null) {
 				studs[i]=stud;
-				System.out.println("Còóäåíò " + stud.getLastName() + " " + stud.getName() + " äîäàíèé ó ãðóïó " + this.getName() + "!");
+				System.out.println("Ð¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚ " + stud.getLastName() + " " + stud.getName() + " Ð´Ð¾Ð´Ð°Ð½Ð¸Ð¹ Ð² Ð³Ñ€ÑƒÐ¿Ñƒ " + this.getName() + "!");
 				break;
 			}else {
 				counter++;
@@ -76,29 +76,29 @@ public class Group implements Voenkom {
 		Scanner scan = new Scanner(System.in);
 		Scanner sc = new Scanner(System.in);
 		
-		 System.out.println("Ââåä³òü íàçâó óí³âåðñèòåòà : ");
+		 System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð½Ð°Ð·Ð²Ñƒ ÑƒÐ½Ñ–Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚Ð° : ");
 		    nameOfUniversity=scan.nextLine();
 		    
-		System.out.println("Ââåä³òü ³ìÿ ñòóäåíòà: ");
+		System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð¼*Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ");
 		name= scan.nextLine();
 		
-		System.out.println("Ââåä³òü ïð³çâèùå ñòóäåíòà: ");
+		System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð¿Ñ€Ñ–Ð·Ð²Ð¸Ñ‰Ðµ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ");
 	    lastName=scan.nextLine();
 	    
-	    System.out.println("Ââåä³òü ïî-áàòüêîâ³ ñòóäåíòà : ");
+	    System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð¿Ð¾-Ð±Ð°Ñ‚ÑŒÐºÐ¾Ð²Ñ– ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° : ");
 	    surName=scan.nextLine();
 	    
-	    System.out.println("Ââåä³òü â³ê ñòóäåíòà ");
+	    System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð²Ñ–Ðº ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° ");
 	    age=scan.nextInt();
 	    
 	   
-	    System.out.println("Ââåä³òü ôàêóëüòåò : ");
+	    System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ„Ð°ÐºÑƒÐ»ÑŒÑ‚ÐµÑ‚ : ");
 	    faculty=sc.nextLine();
 	    
-	    System.out.println("Ââåä³òü êóðñ :");
+	    System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÐºÑƒÑ€ÑÐ¸ :");
 	    course=scan.nextInt();
 	    
-	    System.out.println("Ââåä³òü ãðóïó :");
+	    System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð³Ñ€ÑƒÐ¿Ñƒ :");
 	    group=sc.nextLine();
 	    
 	    
@@ -121,7 +121,7 @@ public class Group implements Voenkom {
 		if(studs[i]!=null) {
 			if(studs[i].equals(stud)) {
 				studs[i]=null;
-				System.out.println("Ñòóäåíò " + stud.getLastName() + " " + stud.getName() + " âèëó÷åíèé ç ãðóïè!");
+				System.out.println("Ð¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚ " + stud.getLastName() + " " + stud.getName() + " Ð²Ð¸Ð´Ð°Ð»ÐµÐ½Ð¸Ð¹ Ð· Ð³Ñ€ÑƒÐ¿Ð¸!");
 				break;
 			}
 		}
@@ -150,7 +150,7 @@ public class Group implements Voenkom {
 	@Override
 	public String toString() {
 	
-		System.out.println(" Ãðóïà : " + this.getName());
+		System.out.println(" Ð“Ñ€ÑƒÐ¿Ð° : " + this.getName());
 	
 		
 		 for(int i = 0; i<studs.length; i++) {
@@ -171,7 +171,7 @@ public class Group implements Voenkom {
 	int count=1;
 		 for (int i = 0; i < studs.length; i++) {
 			 if(studs[i]!=null) {
-			 System.out.println( count + ")" + "Ï²Á: " + studs[i].getLastName()+" " + studs[i].getName() + " " +studs[i].getSurName()  +  "\n Â³ê:" + studs[i].getAge() + " \n Ôàêóëüòåò: " + studs[i].getFaculty() + "\nÓí³âåðñèòåò: " + studs[i].getNameOfUniversity()+ " \n Ãðóïà: " + studs[i].getGroup());
+			 System.out.println( count + ")" + "ÐŸÐ†Ð‘: " + studs[i].getLastName()+" " + studs[i].getName() + " " +studs[i].getSurName()  +  "\n Ð’Ñ–Ðº:" + studs[i].getAge() + " \n Ð¤Ð°ÐºÑƒÐ»ÑŒÑ‚ÐµÑ‚: " + studs[i].getFaculty() + "\nÐ£Ð½Ñ–Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚: " + studs[i].getNameOfUniversity()+ " \n Ð“Ñ€ÑƒÐ¿Ð°: " + studs[i].getGroup());
 		count++;
 			 }}
 		 
@@ -187,7 +187,7 @@ public void sortByParametr() {
 	
 	int parametr;
 	Scanner scan = new Scanner(System.in);
-	System.out.println("Ââåä³òü 1 - äëÿ ñîðòóâàííÿ çà ³ìåíåì \n 2 - äëÿ ñîðòóâàííÿ çà ïð³çâèùåì \n 3 - äëÿ ñîðòóâàííÿ çà â³êîì ");
+	System.out.println("Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ  1 - Ð´Ð»Ñ ÑÐ¾Ñ€Ñ‚ÑƒÐ²Ð°Ð½Ð½Ñ Ð·Ð° Ñ–Ð¼ÐµÐ½ÐµÐ¼ \n 2 - Ð´Ð»Ñ ÑÐ¾Ñ€Ñ‚ÑƒÐ²Ð°Ð½Ð½Ñ Ð·Ð° Ð¿Ñ€Ñ–Ð·Ð²Ð¸Ñ‰ÐµÐ¼ \n 3 - Ð´Ð»Ñ ÑÐ¾Ñ€Ñ‚ÑƒÐ²Ð°Ð½Ð½Ñ Ð·Ð° Ð²Ñ–ÐºÐ¾Ð¼ ");
 	parametr=scan.nextInt();
 	
 	
@@ -213,7 +213,7 @@ public void sortByParametr() {
 
 	
 	public void sortStudentsByLastName() {
-	System.out.println("Ñîðòóâàííÿ ïî ïð³çâèùó: ");
+	System.out.println("Ð¡Ð¾Ñ€Ñ‚ÑƒÐ²Ð°Ð½Ð½Ñ Ð·Ð° Ð¿Ñ€Ñ–Ð·Ð²Ð¸Ñ‰ÐµÐ¼: ");
 	toString();	
 		
 	}
@@ -224,7 +224,7 @@ public void sortByParametr() {
 		
 	
     public void sortByName() {
-    	System.out.println("Cîðòèðîâêà ïî ³ìåí³ ");
+    	System.out.println("Ð¡Ð¾Ñ€Ñ‚ÑƒÐ²Ð°Ð½Ð½Ñ Ð·Ð° Ñ–Ð¼ÐµÐ½ÐµÐ¼ ");
     	 for(int i = 0; i<studs.length; i++) {
 	         for (int j = i+1; j<studs.length; j++) {
 	          
@@ -243,8 +243,9 @@ public void sortByParametr() {
 	int count=1;
 		 for (int i = 0; i < studs.length; i++) {
 			 if(studs[i]!=null) {
-			 System.out.println( count + ")" + "Ï²Á: " + studs[i].getName()+" " + studs[i].getLastName() + " " +studs[i].getSurName()  +  "\n Â³ê:" + studs[i].getAge() + " \n Ôàêóëüòåò: " + studs[i].getFaculty() + "\nÓí³âåðñèòåò: " + studs[i].getNameOfUniversity()+ " \n Ãðóïà: " + studs[i].getGroup());
-		count++;
+		 System.out.println( count + ")" + "ÐŸÐ†Ð‘: " + studs[i].getLastName()+" " + studs[i].getName() + " " +studs[i].getSurName()  +  "\n Ð’Ñ–Ðº:" + studs[i].getAge() + " \n Ð¤Ð°ÐºÑƒÐ»ÑŒÑ‚ÐµÑ‚: " + studs[i].getFaculty() + "\nÐ£Ð½Ñ–Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚: " + studs[i].getNameOfUniversity()+ " \n Ð“Ñ€ÑƒÐ¿Ð°: " + studs[i].getGroup());
+		
+				 count++;
 			 }}
 		 	
     	
@@ -253,7 +254,7 @@ public void sortByParametr() {
 
     public void sortByAge() {
     	
-    	System.out.println("Cîðòèðîâêà ïî â³êó ");
+    	System.out.println("Ð¡Ð¾Ñ€Ñ‚ÑƒÐ²Ð°Ð½Ð½Ñ Ð·Ð° Ð²Ñ–ÐºÐ¾Ð¼ ");
       	 
     	
     	
@@ -276,7 +277,7 @@ public void sortByParametr() {
 	int count=1;
 		 for (int i = 0; i < studs.length; i++) {
 			 if(studs[i]!=null) {
-			 System.out.println( count + ")" + "Ï²Á: " + studs[i].getName()+" " + studs[i].getLastName() + " " +studs[i].getSurName()  +  "\n Â³ê:" + studs[i].getAge() + " \n Ôàêóëüòåò: " + studs[i].getFaculty() + "\nÓí³âåðñèòåò: " + studs[i].getNameOfUniversity()+ " \n Ãðóïà: " + studs[i].getGroup());
+			 System.out.println( count + ")" + "ÐŸÐ†Ð‘: " + studs[i].getLastName()+" " + studs[i].getName() + " " +studs[i].getSurName()  +  "\n Ð’Ñ–Ðº:" + studs[i].getAge() + " \n Ð¤Ð°ÐºÑƒÐ»ÑŒÑ‚ÐµÑ‚: " + studs[i].getFaculty() + "\nÐ£Ð½Ñ–Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚: " + studs[i].getNameOfUniversity()+ " \n Ð“Ñ€ÑƒÐ¿Ð°: " + studs[i].getGroup());
 		count++;
 			 }}
 		 	
@@ -287,17 +288,9 @@ public void sortByParametr() {
 	@Override
 	public Student[] getStudentsToVoenkom() {
 		
-		System.out.println("Ñòóäåíòè ,ÿêèì ïîòð³áíî â³äâ³äàòè â³éñüêîìàò!");
+		System.out.println("Ð¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¸ ,ÑÐºÐ¸Ð¼ Ð¿Ð¾Ñ‚Ñ€Ñ–Ð±Ð½Ð¾ Ð²Ñ–Ð´Ð²Ñ–Ð´Ð°Ñ‚Ð¸ Ð²Ñ–Ð¹ÑÑŒÐºÐ¾Ð¼Ð°Ñ‚!");
 		int count=0;
-	/*	for (int i = 0; i < studs.length; i++) {
-			if(studs[i]!=null) {
-			
-			if(studs[i].getAge()>18) {	
-				count++;
-			}
-			
-		}}*/
-
+	
 		Student[] studToVoenkom = new Student[this.sizeOfGroup];
 		int pos=0;
 		for (int i = 0; i < studToVoenkom.length; i++) {
