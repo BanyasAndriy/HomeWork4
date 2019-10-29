@@ -7,7 +7,7 @@ public class ExceptionOfGroup extends RuntimeException {
 		
 		
 		
-		return "Увага! Група заповнена!";
+		return "РЈРІР°РіР°! Р“СЂСѓРїР° Р·Р°РїРѕРІРЅРµРЅР°!";
 		
 	}
 	
