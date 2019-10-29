@@ -46,7 +46,7 @@ public class People {
 	@Override
 	public String toString() {
 	
-		String rez =this.getName() + " " + this.getLastName() + " "+ this.getSurName() + " " + this.getAge() + " ðîê³â!";
+		String rez =this.getName() + " " + this.getLastName() + " "+ this.getSurName() + " " + this.getAge() + " Ñ€Ð¾ÐºÑ–Ð²!";
 		return rez;
 	}
 	
