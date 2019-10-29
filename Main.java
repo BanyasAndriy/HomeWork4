@@ -9,12 +9,12 @@ public class Main {
 		
 		
 	
-		Student stud1 = new Student("Андрій","Баняс","Віталійович",17,"NUFT","ACS",3,"KN-3-3"); 
-		Student stud2 = new Student("Олег","Микитин","Василійович",21,"NUFT","ACS",3,"KN-3-3"); 
-		Student stud3 = new Student("Владислав","Луценко","Анатолійович",17,"NUFT","ACS",3,"KN-3-3"); 
-		Student stud4 = new Student("Тарас","Ширшов","Олегович",17,"NUFT","ACS",3,"KN-3-3"); 
-		Student stud5 = new Student("Андрій","Кобилянський","Віталійович",20,"NUFT","ACS",3,"KN-3-3"); 
-		Student stud6 = new Student("Максим ","Титечко","Віталійович",19,"NUFT","ACS",3,"KN-3-3"); 
+		Student stud1 = new Student("РђРЅРґСЂС–Р№","Р‘Р°РЅСЏСЃ","Р’С–С‚Р°Р»С–Р№РѕРІРёС‡",17,"NUFT","ACS",3,"KN-3-3"); 
+		Student stud2 = new Student("РћР»РµРі","РњРёРєРёС‚РёРЅ","Р’Р°СЃРёР»С–Р№РѕРІРёС‡",21,"NUFT","ACS",3,"KN-3-3"); 
+		Student stud3 = new Student("Р’Р»Р°РґРёСЃР»Р°РІ","Р›СѓС†РµРЅРєРѕ","РђРЅР°С‚РѕР»С–Р№РѕРІРёС‡",17,"NUFT","ACS",3,"KN-3-3"); 
+		Student stud4 = new Student("РўР°СЂР°СЃ","РЁРёСЂС€РѕРІ","РћР»РµРіРѕРІРёС‡",17,"NUFT","ACS",3,"KN-3-3"); 
+		Student stud5 = new Student("РђРЅРґСЂС–Р№","РљРѕР±РёР»СЏРЅСЃСЊРєРёР№","Р’С–С‚Р°Р»С–Р№РѕРІРёС‡",20,"NUFT","ACS",3,"KN-3-3"); 
+		Student stud6 = new Student("РњР°РєСЃРёРј ","РўРёС‚РµС‡РєРѕ","Р’С–С‚Р°Р»С–Р№РѕРІРёС‡",19,"NUFT","ACS",3,"KN-3-3"); 
 		
 		Group group = new Group("KN-3-3",10);
 		
@@ -28,23 +28,17 @@ public class Main {
 		group.addStudents(stud6);
 		group.addStudents(stud6);
 		group.addStudents(stud6);
-	//	group.addStudents(stud6);
-		//group.addStudents(stud6);
-//	group.addStudents(stud2);
-		//group.interactiveAddingObject();
-		//group.interactiveAddingObject();
+		group.interactiveAddingObject();
 		
-		System.out.println(group.searchStudent("Горобінський"));
+		
 		}catch(ExceptionOfGroup eog) {
 			System.out.println(eog.getMessage());
 		}
 		
 		
+		System.out.println(group.searchStudent("Р“РѕСЂРѕР±С–РЅСЃСЊРєРёР№"));
 		
 		System.out.println(group);
-	
-		//group.sortByParametr();
-		
 		
 		for (Student stud : group.getStudentsToVoenkom()) {
 			if(stud!=null)
